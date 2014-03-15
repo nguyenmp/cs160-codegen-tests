@@ -4,21 +4,42 @@ Program {
     print 5 + 9;
     print 14;
 
+    print 4 < 5;
+    print 1;
+
+    print 4 < 4;
+    print 0;
+
     /* Subtract */
     print 24 - 8;
     print 16;
 
+    print 5 < 4;
+    print 0;
+
     print -16 - 4;
     print -20;
 
+    print true and false;
+    print 0;
+
+    print 34 <= 35;
+    print 1;
+
     print 20 / 4;
     print 5;
+
+    print 35 <= 35;
+    print 1;
 
     print 4 / 20;
     print 0;
 
     print 8 * 5;
     print 40;
+
+    print 36 <= 35;
+    print 0;
 
     print -20 * 3;
     print -60;
@@ -31,6 +52,27 @@ Program {
 
     print false;
     print 0;
+
+    print true and true;
+    print 1;
+
+    print false and true;
+    print 0;
+
+    print 33 - - 26;
+    print 59;
+
+    print false and false;
+    print 0;
+
+    print 255 * - 1;
+    print -255;
+
+    print not true;
+    print 0;
+
+    print not false;
+    print 1;
 
     return;
   };
