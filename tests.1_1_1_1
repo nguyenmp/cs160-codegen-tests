@@ -1,0 +1,18 @@
+Program {
+	first:Bool;
+	second:Bool;
+	third:Bool;
+	var:Int;
+	start() : Nothing {
+		first = true;
+		second = true;
+		if not false then var = 1;
+		print var;
+		if first and second then third=true;
+		print first;
+		print second;
+		print third; 
+		
+		return;
+	};
+};
