@@ -1,0 +1,105 @@
+Bean {
+  a : Int;
+  b : Int;
+  c : Bool;
+
+  getAlpha() : Int {
+    return a;
+  };
+
+  getBeta() : Int {
+    return b;
+  };
+
+  getGamma() : Bool {
+    return c;
+  };
+
+  setAlpha(alpha : Int) : Nothing {
+    a = alpha;
+    return;
+  };
+
+  setBeta(beta : Int) : Nothing {
+    b = beta;
+    return;
+  };
+
+  setGamma(gamma : Bool) : Nothing {
+    c = gamma;
+    return;
+  };
+};
+
+UltraBean from Bean {
+  d : Bool;
+
+  getDelta() : Bool {
+    return d;
+  };
+
+  setDelta(delta : Bool) : Nothing {
+    d = delta;
+    return;
+  };
+};
+
+MasterBean from UltraBean {
+  zelda : Bool;
+
+  getZelda() : Bool {
+    return zelda;
+  };
+
+  setZelda(z : Bool) : Nothing {
+    zelda = z;
+    return;
+  };
+};
+
+Beaner {
+  ageFactor : Int;
+  ageFactee : Int;
+  junk : Nothing;
+
+  doBasicBeanerInitialization(bean : Bean) : Nothing {
+    junk = bean.setAlpha(3565984);
+    junk = bean.setBeta(-95643);
+    junk = bean.setGamma(236*9541 < 0);
+    return;
+  };
+
+  setAge(age : Int) : Nothing {
+    ageFactor = age;
+    return;
+  };
+
+  getAge() : Int {
+    ageFactee = ageFactor;
+    return ageFactee;
+  };
+};
+
+Program {
+  a : Int;
+  c : Nothing;
+  b : Bool;
+  start() : Nothing {
+    chavez : Beaner;
+    pinto : MasterBean;
+    a = 1;
+    b = false;
+    c = chavez.setAge(200);
+    print a;
+    print b;
+    c = chavez.doBasicBeanerInitialization(pinto);
+    a = chavez.getAge();
+    print a + chavez.getAge();
+    print pinto.getAlpha();
+    print pinto.getBeta();
+    print pinto.getGamma();
+    print a;
+    print b;
+    return;
+  };
+};
