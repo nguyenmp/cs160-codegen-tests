@@ -12,4 +12,10 @@ cd into `cs160/codegen/`
 
 run `./tester.sh tests/test.*`
 
+run `./tester.sh` will default to `./tester.sh`
+
+run `./tester.sh filename` will compile and run the given test file with your compiler.
+
+errors will be dumped into test.s
+
 add `tests/` to your `.gitignore` of your root directory of `codegen`
