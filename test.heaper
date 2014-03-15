@@ -100,6 +100,18 @@ Program {
     print pinto.getGamma();
     print a;
     print b;
+    c = pinto.setDelta(123 / 123 * 123 - 123 < 1);
+    c = pinto.setZelda(123 / 123 * 123 - 123 <= 0);
+    print a + chavez.getAge();
+    print pinto.getAlpha();
+    print pinto.getBeta();
+    print pinto.getGamma();
+    print a;
+    print b;
+
+    if true then print false;
+    if false then print true;
+
     return;
   };
 };
