@@ -1,0 +1,59 @@
+FibGenerator
+{
+    last:Int;
+    second_to_last:Int;
+
+    next_fib():Int
+    {
+        next:Int;
+        next = last + second_to_last;
+        second_to_last = last;
+        last = next;
+        return next;
+    };
+};
+
+OnceResetingFibGenerator from FibGenerator
+{
+
+    update( state1:Int, state2:Int ): Bool
+    {
+        last = state1;
+        second_to_last = state2;
+        return true;
+    };
+};
+
+
+Program
+{
+    start() : Nothing
+    {
+        success : Bool;
+        f : OnceResetingFibGenerator;
+        success = f.update(1, 1);
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        print f.next_fib();
+        return;
+    };
+};

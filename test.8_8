@@ -1,0 +1,13 @@
+Program {
+  foo(x : Int, a : Int, b : Int, c : Int) : Int {
+    return a / b;
+  };
+
+  start() : Nothing {
+    x : Int;
+    x = -2 + foo(10000, 1000, 100, 10);
+    print x;
+    print -2 + foo(10000, 1000, 100, 10);
+    return;
+  };
+};

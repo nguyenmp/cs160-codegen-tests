@@ -1,0 +1,37 @@
+Program {
+  start() : Nothing {
+    /* Add */
+    print 5 + 9;
+    print 14;
+
+    /* Subtract */
+    print 24 - 8;
+    print 16;
+
+    print -16 - 4;
+    print -20;
+
+    print 20 / 4;
+    print 5;
+
+    print 4 / 20;
+    print 0;
+
+    print 8 * 5;
+    print 40;
+
+    print -20 * 3;
+    print -60;
+
+    print 3 * -20;
+    print -60;
+
+    print true;
+    print 1;
+
+    print false;
+    print 0;
+
+    return;
+  };
+};

@@ -1,0 +1,14 @@
+Program {
+  foo(x : Int, a : Int, b : Int, c : Int) : Int {
+    print a + b;
+    return a + b;
+  };
+
+  start() : Nothing {
+    x : Int;
+    x = foo(1 ,100, 1000, 10000);
+    print x;
+    print -2 + foo(1, 100, 1000, 10000);
+    return;
+  };
+};

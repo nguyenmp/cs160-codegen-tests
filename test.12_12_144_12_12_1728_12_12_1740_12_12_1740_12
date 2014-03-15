@@ -1,0 +1,19 @@
+Program {
+  alpha : Int;
+  foo(gamma : Int, beta : Int, delta : Int) : Int {
+    print beta;
+    print alpha;
+    return alpha * beta;
+  };
+
+  start() : Nothing {
+    x : Int;
+    alpha = 12;
+    print foo(-669, alpha, 999999);
+    print foo(-669, alpha, 999999) * alpha;
+    print 12 + foo(-669, alpha, 999999) * alpha;
+    x = foo(-669, 12 + foo(-669, alpha, 999999) * alpha, 999999);
+    x = x + x;
+    return;
+  };
+};

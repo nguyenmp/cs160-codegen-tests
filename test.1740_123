@@ -1,0 +1,62 @@
+Bean {
+  alpha : Int;
+  beta : Int;
+  gamma : Int;
+  delta : Int;
+
+  getAlpha() : Int {
+    return alpha;
+  };
+
+  getBeta() : Int {
+    return beta;
+  };
+
+  getGamma() : Int {
+    return gamma;
+  };
+
+  getDelta() : Int {
+    return delta;
+  };
+
+  setAlpha(a : Int) : Nothing {
+    alpha = a;
+    return;
+  };
+};
+
+Program {
+  delta : Int;
+  gamma : Int;
+  alpha : Int;
+  rho : Int;
+
+  foo(beta : Int) : Int {
+    return alpha * beta;
+  };
+
+  getGamma() : Int {
+    return gamma;
+  };
+
+  doStuff(myBean : Bean) : Nothing {
+    temp : Nothing;
+    temp = myBean.setAlpha(123);
+    print myBean.getAlpha();
+    return;
+  };
+
+  start() : Nothing {
+    x : Int;
+    myFavoriteBean : Bean;
+    junk : Nothing;
+    alpha = 12;
+    gamma = 12 + foo(alpha) * alpha;
+    print getGamma();
+
+    junk = doStuff(myFavoriteBean);
+
+    return;
+  };
+};
