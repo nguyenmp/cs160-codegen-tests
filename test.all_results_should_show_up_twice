@@ -74,6 +74,9 @@ Program {
     print not false;
     print 1;
 
+    print -  - 669;
+    print 669;
+
     return;
   };
 };
