@@ -8,3 +8,5 @@ cs160/codegen/Makefile
 cd into `cs160/codegen/`
 
 run `./tester.sh tests/test.*`
+
+add `tests/` to your `.gitignore` of your root directory of `codegen`
