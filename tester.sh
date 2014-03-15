@@ -8,7 +8,7 @@ if [ $? -ne 0 ]; then
 fi
 
 shopt -s nullglob
-filepath=(tests/*)
+filepath=(tests/test.*)
 
 if [ $# -ne 0 ]; then
   filepath=($@)
