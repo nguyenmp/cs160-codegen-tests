@@ -1,0 +1,56 @@
+Master {
+  junk : Nothing;
+  index : Int;
+
+  init() : Nothing {
+    index = 0;
+    return;
+  };
+
+  recurseWhileLessThan(limit : Int) : Nothing {
+    print index;
+    index = index + 1;
+    if index < limit then junk = recurseWhileLessThan(limit);
+    return;
+  };
+};
+
+Program from Master {
+  bar : Nothing;
+
+  foo(garbage : Nothing) : Nothing {
+    bar = garbage;
+    garbage = bar;
+    return garbage;
+  };
+
+  fee(garbage : Nothing) : Nothing {
+    bar = garbage;
+    garbage = bar;
+    return bar;
+  };
+
+  start() : Nothing {
+    /* Test garbage passing and stuff */
+    print bar;
+    bar = foo(bar);
+    print bar;
+    bar = fee(bar);
+    print bar;
+
+    /* Test recursion */
+    junk = init();
+    bar = recurseWhileLessThan(12);
+    bar = recurseWhileLessThan(12); /* This should not be called */
+
+    /* Test garbage passing */
+    print bar;
+    bar = foo(bar);
+    print bar;
+    bar = fee(bar);
+    print bar;
+
+    print index;
+    return;
+  };
+};
