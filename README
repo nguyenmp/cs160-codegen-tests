@@ -1,15 +1,8 @@
-#! /bin/bash
+Run the tester suite by cloning this repo into the project directory under tests/
 
-make
-echo ""
+Your project should look like:
+cs160/codegen/tests/test.8_8
 
-if [ $? -ne 0 ]; then
-  exit 1;
-fi
+cd into cs160/codegen/
 
-for file in "$@"
-do
-        echo "Testing $file"
-        ./lang < "$file" 1> /dev/null 2> test.s && gcc -g -m32 -o start start.c test.s && ./start
-        echo ""
-done
+run tester.sh tests/test.*
