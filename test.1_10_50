@@ -1,0 +1,54 @@
+Animal {
+	age:Int;
+	
+	getAge() : Int {
+		return age;
+	};
+	
+	setAge(x:Int) : Nothing {
+		age = x;
+		return;
+	};
+};
+
+Dog from Animal { 
+	canBark:Bool;
+	
+	getBark() : Bool {
+		return canBark;
+	};
+	
+	setBark(b:Bool) : Nothing {
+		canBark = b;
+		return;
+	};
+
+};
+
+DogForm {
+	setDogAge(dog:Dog, x:Int) : Nothing {
+		return dog.setAge(x);
+	};
+	getDogAge(dog:Dog) : Int {
+		return dog.getAge();
+	};
+};
+
+Program {
+	start() : Nothing { 
+		d:Dog;
+		df:DogForm;
+		junk:Nothing;
+		
+		junk = d.setBark(true);
+		junk = d.setAge(10);
+		print d.getBark();
+		print d.getAge();
+		junk = df.setDogAge(d, 50);
+		print df.getDogAge(d);
+		
+		return;
+	};
+	
+
+};
